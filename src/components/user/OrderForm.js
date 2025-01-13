@@ -91,10 +91,10 @@ class OrderForm extends Component {
                                 <option value="8:45">8:45 - Pierwsza przerwa</option>
                                 <option value="9:40">9:40 - Druga przerwa</option>
                                 <option value="10:35">10:35 - Trzecia przerwa</option>
-                                <option value="11:20">10:35 - Czwarta przerwa</option>
-                                <option value="12:15">10:35 - Piąta przerwa</option>
-                                <option value="13:15">10:35 - Szósta przerwa</option>
-                                <option value="14:10">10:35 - Siódma przerwa</option>
+                                <option value="11:20">11:20 - Czwarta przerwa</option>
+                                <option value="12:15">12:15 - Piąta przerwa</option>
+                                <option value="13:15">13:15 - Szósta przerwa</option>
+                                <option value="14:10">14:10 - Siódma przerwa</option>
                             </select>
                         </div>
 
