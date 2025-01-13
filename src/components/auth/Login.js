@@ -72,6 +72,7 @@ const Login = ({ onLogin }) => {
                                     type="email"
                                     className="form-control"
                                     value={email}
+                                    placeholder="jan@example.com"
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
                                 />

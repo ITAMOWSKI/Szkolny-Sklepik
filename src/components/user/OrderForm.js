@@ -73,7 +73,7 @@ class OrderForm extends Component {
 
         return (
             <div className="card">
-                <div className="card-body">
+                <div className="card-body bg-body-tertiary">
                     <h3 className="card-title">Formularz zamówienia</h3>
                     {error && (
                         <div className="alert alert-danger">{error}</div>
@@ -111,19 +111,20 @@ class OrderForm extends Component {
                             </select>
                         </div>
 
-                        <div className="form-group">
+                        <div className="form-group mb-3">
                             <label>Uwagi do zamówienia</label>
                             <textarea
                                 name="notes"
                                 className="form-control"
                                 rows="3"
                                 onChange={this.handleInputChange}
+                                placeholder="(Opcionalne)"
                                 value={this.state.notes}
                             ></textarea>
                         </div>
 
                         <div className="table-responsive mb-3">
-                            <table className="table">
+                            <table className="table table-striped border">
                                 <thead>
                                 <tr>
                                     <th>Produkt</th>
@@ -147,24 +148,24 @@ class OrderForm extends Component {
                             </table>
                         </div>
 
-                        <div className="form-group">
+                        <div className="form-group mb-3">
                             <div className="custom-control custom-checkbox">
                                 <input
                                     type="checkbox"
-                                    className="custom-control-input"
+                                    className="form-check-input"
                                     id="termsAccepted"
                                     name="termsAccepted"
                                     checked={this.state.termsAccepted}
                                     onChange={this.handleInputChange}
                                 />
-                                <label className="custom-control-label" htmlFor="termsAccepted">
+                                <label className="form-check-label" for="termsAccepted">
                                     Akceptuję regulamin sklepiku
                                 </label>
                             </div>
                         </div>
 
                         <button type="submit" className="btn btn-success btn-lg btn-block">
-                            Złóż zamówienie
+                            <i class="bi bi-cart-check-fill"></i>Złóż zamówienie
                         </button>
                     </form>
                 </div>

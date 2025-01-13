@@ -42,6 +42,13 @@ class ProductManager extends Component {
         }
     };
 
+    /*****************************************************************************************************************************************
+     * nazwa funkcji:        handleSubmit
+     * opis funkcji:         Obsługuje dodawanie nowego produktu lub aktualizację istniejącego produktu
+     * parametry:           e - obiekt zdarzenia
+     * zwracany typ:        brak
+     * autor:               Mateusz Szelec 4AP
+     ******************************************************************************************************************************************/
     handleSubmit = (e) => {
         e.preventDefault();
         if (this.state.editProduct) {
@@ -59,10 +66,24 @@ class ProductManager extends Component {
         }
     };
 
+    /*****************************************************************************************************************************************
+     * nazwa funkcji:        handleEdit
+     * opis funkcji:         Inicjuje proces edycji produktu, wczytując dane istniejącego produktu do formularza
+     * parametry:           product - obiekt produktu do edycji
+     * zwracany typ:        brak
+     * autor:               Mateusz Szelec 4AP
+     ******************************************************************************************************************************************/
     handleEdit = (product) => {
         this.setState({ editProduct: { ...product } });
     };
 
+    /*****************************************************************************************************************************************
+     * nazwa funkcji:        handleDelete
+     * opis funkcji:         Usuwa produkt z listy na podstawie jego identyfikatora
+     * parametry:           productId - identyfikator produktu do usunięcia
+     * zwracany typ:        brak
+     * autor:               Mateusz Szelec 4AP
+     ******************************************************************************************************************************************/
     handleDelete = (productId) => {
         this.props.deleteProduct(productId);
     };
@@ -82,6 +103,7 @@ class ProductManager extends Component {
                             name="name"
                             className="form-control"
                             value={editProduct ? editProduct.name : newProduct.name}
+                            placeholder="Kanapka"
                             onChange={this.handleInputChange}
                         />
                     </div>
@@ -93,6 +115,7 @@ class ProductManager extends Component {
                                 name="price"
                                 className="form-control"
                                 value={editProduct ? editProduct.price : newProduct.price}
+                                placeholder="2.50"
                                 onChange={this.handleInputChange}
                             />
                             <span className="input-group-text">zł</span>
@@ -120,6 +143,7 @@ class ProductManager extends Component {
                             name="description"
                             className="form-control"
                             value={editProduct ? editProduct.description : newProduct.description}
+                            placeholder="Krótki opis produktu"
                             onChange={this.handleInputChange}
                         />
                     </div>

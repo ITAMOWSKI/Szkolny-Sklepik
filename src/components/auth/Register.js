@@ -3,7 +3,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-
+/*****************************************************************************************************************************************
+ * nazwa komponentu:     Register
+ * opis komponentu:     Komponent obsługujący rejestrację nowych użytkowników
+ * komponenty:          Form, Link
+ * autor:               Mateusz Szelec 4AP
+ ******************************************************************************************************************************************/
 const Register = ({ onRegister }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -13,6 +18,13 @@ const Register = ({ onRegister }) => {
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
+    /*****************************************************************************************************************************************
+     * nazwa funkcji:        handleSubmit
+     * opis funkcji:         Obsługuje wysłanie formularza rejestracyjnego, weryfikuje dane i przekazuje informacje o nowym użytkowniku
+     * parametry:           e - obiekt zdarzenia
+     * zwracany typ:        brak
+     * autor:               Mateusz Szelec 4AP
+     ******************************************************************************************************************************************/
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -60,6 +72,7 @@ const Register = ({ onRegister }) => {
                                         type="text"
                                         className="form-control"
                                         value={name}
+                                        placeholder="Jan Kowalski"
                                         onChange={(e) => setName(e.target.value)}
                                         required
                                     />
@@ -70,6 +83,7 @@ const Register = ({ onRegister }) => {
                                         type="text"
                                         className="form-control"
                                         value={className}
+                                        placeholder="4AP"
                                         onChange={(e) => setClassName(e.target.value)}
                                         required
                                     />
@@ -81,6 +95,7 @@ const Register = ({ onRegister }) => {
                                     type="email"
                                     className="form-control"
                                     value={email}
+                                    placeholder="jan@example.com"
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
                                 />

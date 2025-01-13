@@ -7,7 +7,7 @@ class Navbar extends Component {
         const { isAuthenticated, isAdmin, onLogout } = this.props;
 
         return (
-            <nav className="navbar navbar-expand-lg bg-success" data-bs-theme="dark">
+            <nav className="navbar navbar-expand-lg bg-success shadow-lg sticky-top" data-bs-theme="dark">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/"><i class="bi bi-bag-check-fill"></i>Szkolny Sklepik</Link>
                     <button
@@ -49,17 +49,21 @@ class Navbar extends Component {
                             {isAdmin && (
                                 <>
                                     <li className="nav-item">
-                                        <Link className="nav-link active" to="/admin"><i class="bi bi-clipboard2-data-fill"></i>Panel
+                                        <Link className="nav-link active" to="/admin"><i
+                                            className="bi bi-clipboard2-data-fill"></i>Panel
                                             administratora</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link active" to="/admin/products"><i class="bi bi-bag-plus-fill"></i>Zarządzanie
-                                            produktami</Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link className="nav-link active" to="/admin/orders"><i class="bi bi-list-ol"></i>Zarządzanie
+                                        <Link className="nav-link active" to="/admin/orders"><i
+                                            className="bi bi-list-ul"></i>Zarządzanie
                                             zamówieniami</Link>
                                     </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link active" to="/admin/products"><i
+                                            className="bi bi-bag-plus-fill"></i>Zarządzanie
+                                            produktami</Link>
+                                    </li>
+
                                 </>
                             )}
                         </ul>

@@ -12,7 +12,7 @@ class ProductCard extends Component {
         const { product } = this.props;
         return (
             <div className="card product-card bg-body-tertiary">
-                <div className="card-body">
+                <div className="card-body shadow">
                     <h5 className="card-title">{product.name}</h5>
                     <p className="card-text">{product.description}</p>
                     <p className="card-text">

@@ -160,6 +160,20 @@ Aplikacja jest w pełni responsywna i zoptymalizowana zarówno dla urządzeń st
 - Filtrowanie statusów zamówień
 - Filtrowanie historii zamówień
 
+## 🌆 Galaria
+<table style="border: none">
+  <tr style="border: none">
+    <td style="border: none"><img src="screenshots/products.png" alt="Screenshot"></td>
+    <td style="border: none"><img src="screenshots/login.png" alt="Screenshot"></td>
+    <td style="border: none"><img src="screenshots/register.png" alt="Screenshot"></td>
+  </tr>
+  <tr style="border: none">
+    <td style="border: none"><img src="screenshots/cart.png" alt="Screenshot"></td>
+    <td style="border: none"><img src="screenshots/order.png" alt="Screenshot"></td>
+    <td style="border: none"><img src="screenshots/manager.png" alt="Screenshot"></td>
+  </tr>
+</table>
+
 ## 📄 Licencja
 Ten projekt jest licencjonowany na warunkach licencji MIT - szczegóły w pliku LICENSE.
 

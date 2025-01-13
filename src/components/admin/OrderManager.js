@@ -38,6 +38,13 @@ class OrderManager extends Component {
         }));
     }
 
+    /*****************************************************************************************************************************************
+     * nazwa funkcji:        getStatusBadgeClass
+     * opis funkcji:         Zwraca odpowiednią klasę CSS dla oznaczenia statusu zamówienia
+     * parametry:           status - status zamówienia
+     * zwracany typ:        string (klasa CSS)
+     * autor:               Mateusz Szelec 4AP
+     ******************************************************************************************************************************************/
     getStatusBadgeClass = (status) => {
         const classes = {
             new: 'text-bg-primary',
@@ -48,6 +55,13 @@ class OrderManager extends Component {
         return `badge ${classes[status] || 'badge-secondary'}`;
     };
 
+    /*****************************************************************************************************************************************
+     * nazwa funkcji:        getStatusDisplayName
+     * opis funkcji:         Zwraca nazwę wyświetlaną dla danego statusu zamówienia
+     * parametry:           status - status zamówienia
+     * zwracany typ:        string (nazwa statusu)
+     * autor:               Mateusz Szelec 4AP
+     ******************************************************************************************************************************************/
     getStatusDisplayName = (status) => {
         const names = {
             new: 'Nowe',

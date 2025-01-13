@@ -191,18 +191,39 @@ class App extends Component {
         });
     };
 
+    /*****************************************************************************************************************************************
+     * nazwa funkcji:        removeFromCart
+     * opis funkcji:         Usuwa produkt z koszyka na podstawie jego identyfikatora
+     * parametry:           productId - identyfikator produktu do usunięcia
+     * zwracany typ:        brak
+     * autor:               Mateusz Szelec 4AP
+     ******************************************************************************************************************************************/
     removeFromCart = (productId) => {
         this.setState((prevState) => ({
             cart: prevState.cart.filter((item) => item.id !== productId),
         }));
     };
 
+    /*****************************************************************************************************************************************
+    * nazwa funkcji:        addProduct
+    * opis funkcji:         Dodaje nowy produkt do listy produktów
+    * parametry:           newProduct - obiekt nowego produktu
+    * zwracany typ:        brak
+    * autor:               Mateusz Szelec 4AP
+    ******************************************************************************************************************************************/
     addProduct = (newProduct) => {
         this.setState((prevState) => ({
             products: [...prevState.products, newProduct],
         }));
     };
 
+    /*****************************************************************************************************************************************
+     * nazwa funkcji:        updateProduct
+     * opis funkcji:         Aktualizuje istniejący produkt na podstawie dostarczonych danych
+     * parametry:           updatedProduct - obiekt zaktualizowanego produktu
+     * zwracany typ:        brak
+     * autor:               Mateusz Szelec 4AP
+     ******************************************************************************************************************************************/
     updateProduct = (updatedProduct) => {
         this.setState((prevState) => ({
             products: prevState.products.map((product) =>
@@ -211,12 +232,26 @@ class App extends Component {
         }));
     };
 
+    /*****************************************************************************************************************************************
+     * nazwa funkcji:        deleteProduct
+     * opis funkcji:         Usuwa produkt z listy produktów na podstawie jego identyfikatora
+     * parametry:           productId - identyfikator produktu do usunięcia
+     * zwracany typ:        brak
+     * autor:               Mateusz Szelec 4AP
+     ******************************************************************************************************************************************/
     deleteProduct = (productId) => {
         this.setState((prevState) => ({
             products: prevState.products.filter((product) => product.id !== productId),
         }));
     };
 
+    /*****************************************************************************************************************************************
+     * nazwa funkcji:        handleOrderSubmit
+     * opis funkcji:         Przetwarza dane zamówienia i dodaje je do listy zamówień
+     * parametry:           orderData - obiekt zawierający dane zamówienia
+     * zwracany typ:        brak
+     * autor:               Mateusz Szelec 4AP
+     ******************************************************************************************************************************************/
     handleOrderSubmit = (orderData) => {
         const newOrder = {
             id: this.state.orders.length + 1,
@@ -235,6 +270,30 @@ class App extends Component {
         }));
     };
 
+    /*****************************************************************************************************************************************
+     * nazwa funkcji:        handleUpdateQuantity
+     * opis funkcji:         Aktualizuje ilość produktu w koszyku (inkrementacja lub dekrementacja)
+     * parametry:           itemId - identyfikator produktu, increment - wartość do zmiany ilości (może być dodatnia lub ujemna)
+     * zwracany typ:        brak
+     * autor:               Mateusz Szelec 4AP
+     ******************************************************************************************************************************************/
+    handleUpdateQuantity = (itemId, increment) => {
+        this.setState((prevState) => ({
+            cart: prevState.cart.map(item =>
+                item.id === itemId
+                    ? { ...item, quantity: Math.max(1, item.quantity + increment) }
+                    : item
+            )
+        }));
+    }
+
+    /*****************************************************************************************************************************************
+     * nazwa funkcji:        register
+     * opis funkcji:         Dodaje nowego użytkownika do listy użytkowników
+     * parametry:           newUser - obiekt nowego użytkownika
+     * zwracany typ:        brak
+     * autor:               Mateusz Szelec 4AP
+     ******************************************************************************************************************************************/
     register = (newUser) => {
         this.setState((prevState) => ({
             users: [...prevState.users, newUser],
@@ -276,6 +335,7 @@ class App extends Component {
                                     <Cart
                                         cart={this.state.cart}
                                         onRemoveItem={this.removeFromCart}
+                                        onUpdateQuantity={this.handleUpdateQuantity}
                                     />
                                 }
                             />

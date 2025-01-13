@@ -22,6 +22,10 @@ class Cart extends Component {
         }, 0);
     }
 
+    handleQuantityChange = (itemId, increment) => {
+        this.props.onUpdateQuantity(itemId, increment);
+    }
+
     render() {
         const { cart, onRemoveItem } = this.props;
 
@@ -33,7 +37,7 @@ class Cart extends Component {
                 ) : (
                     <>
                         <div className="table-responsive">
-                            <table className="table">
+                            <table className="table table-striped rounded-3 border">
                                 <thead>
                                 <tr>
                                     <th>Produkt</th>
@@ -48,7 +52,24 @@ class Cart extends Component {
                                     <tr key={item.id}>
                                         <td>{item.name}</td>
                                         <td>{item.price.toFixed(2)} zł</td>
-                                        <td>{item.quantity}</td>
+                                        <td>
+                                            <div className="input-group input-group-sm d-flex align-items-center">
+                                                <button
+                                                    className="btn btn-outline-secondary"
+                                                    onClick={() => this.handleQuantityChange(item.id, -1)}
+                                                    disabled={item.quantity <= 1}
+                                                >
+                                                    -
+                                                </button>
+                                                <span className="input-group-text">{item.quantity}</span>
+                                                <button
+                                                    className="btn btn-outline-secondary"
+                                                    onClick={() => this.handleQuantityChange(item.id, 1)}
+                                                >
+                                                    +
+                                                </button>
+                                            </div>
+                                        </td>
                                         <td>{(item.price * item.quantity).toFixed(2)} zł</td>
                                         <td>
                                             <button
@@ -63,12 +84,12 @@ class Cart extends Component {
                                 </tbody>
                             </table>
                         </div>
-                        <div className="cart-summary">
+                        <div className="cart-summary bg-body-tertiary border">
                             <h4>Podsumowanie</h4>
                             <p><strong>Suma całkowita: {this.calculateTotal().toFixed(2)} zł</strong></p>
                             <button className="btn btn-success">
                                 <Link to="/order" className="text-white text-decoration-none">
-                                    Przejdź do zamówienia
+                                    <i class="bi bi-cart-check-fill"></i>Przejdź do zamówienia
                                 </Link>
                             </button>
                         </div>
@@ -78,6 +99,5 @@ class Cart extends Component {
         );
     }
 }
-
 
 export default Cart;
