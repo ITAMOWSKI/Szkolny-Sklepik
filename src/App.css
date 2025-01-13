@@ -1,0 +1,66 @@
+/* App.css */
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+i {
+    padding: 4px;
+}
+
+.navbar {
+    padding: 1rem;
+    background: rgb(26,135,84);
+    background: linear-gradient(142deg, rgba(26,135,84,1) 0%, rgba(2,175,94,1) 100%);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+    color: white;
+}
+
+/*.btn-success {*/
+/*  background: rgb(34,193,195);*/
+/*  background: linear-gradient(97deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);*/
+/*}*/
+
+.footer {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin-top: auto;
+}
+
+.product-card {
+    height: 100%;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.admin-dashboard {
+    padding: 2rem;
+}
+
+.order-history {
+    margin-top: 2rem;
+}
+
+.cart-summary {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+.product-manager {
+    margin-bottom: 2rem;
+}
