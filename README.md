@@ -31,7 +31,7 @@ Aplikacja internetowa oparta na React, służąca do zarządzania sklepikiem szk
 - **Routing:** React Router v6
 - **Stylizacja:** Bootstrap 5 + Bootstrap Icons
 - **Zarządzanie Stanem:** React Component State
-- **Uwierzytelnianie:** Prosty system email/hasło (implementacja testowa)
+- **Uwierzytelnianie:** Prosty system email/hasło
 
 ## 📦 Struktura Projektu
 
@@ -43,25 +43,25 @@ src/
 │   │   ├── OrderManager.js      # Zarządzanie zamówieniami
 │   │   └── ProductManager.js    # Zarządzanie produktami
 │   ├── auth/
-│   │   ├── Login.js            # Logowanie
-│   │   └── Register.js         # Rejestracja
+│   │   ├── Login.js             # Logowanie
+│   │   └── Register.js          # Rejestracja
 │   ├── layout/
-│   │   ├── Footer.js           # Stopka
-│   │   └── Navbar.js           # Pasek nawigacji
+│   │   ├── Footer.js            # Stopka
+│   │   └── Navbar.js            # Pasek nawigacji
 │   └── user/
-│       ├── Cart.js             # Koszyk
-│       ├── OrderForm.js        # Formularz zamówienia
-│       ├── OrderHistory.js     # Historia zamówień
-│       ├── ProductCard.js      # Karta produktu
-│       └── ProductList.js      # Lista produktów
-└── App.js                      # Główny komponent aplikacji
+│       ├── Cart.js              # Koszyk
+│       ├── OrderForm.js         # Formularz zamówienia
+│       ├── OrderHistory.js      # Historia zamówień
+│       ├── ProductCard.js       # Karta produktu
+│       └── ProductList.js       # Lista produktów
+└── App.js                       # Główny komponent aplikacji
 ```
 
 ## 🚀 Instalacja i Uruchomienie
 
 1. Klonowanie repozytorium
 ```bash
-git clone [adres-repozytorium]
+git clone https://github.com/ITAMOWSKI/Szkolny-Sklepik
 cd szkolny-sklepik
 ```
 
@@ -122,12 +122,12 @@ Aplikacja wykorzystuje zarządzanie stanem komponentów React z następującymi 
 
 ```javascript
 {
-    isAuthenticated: boolean,  // Stan uwierzytelnienia
-    isAdmin: boolean,         // Uprawnienia administratora
-    user: Object,            // Dane użytkownika
-    cart: Array,             // Koszyk
-    products: Array,         // Lista produktów
-    orders: Array            // Lista zamówień
+    isAuthenticated: boolean,   // Stan uwierzytelnienia
+    isAdmin: boolean,           // Uprawnienia administratora
+    user: Object,               // Dane użytkownika
+    cart: Array,                // Koszyk
+    products: Array,            // Lista produktów
+    orders: Array               // Lista zamówień
 }
 ```
 
