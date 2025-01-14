@@ -3,7 +3,6 @@
     <h1>Szkolny Sklepik</h1>
 </div>
 
-# 
 ![cover.png](screenshots/cover.png)
 
 Aplikacja internetowa oparta na React, służąca do zarządzania sklepikiem szkolnym. Umożliwia uczniom zamawianie jedzenia i napojów na konkretne przerwy, a administratorom zarządzanie produktami i zamówieniami.
