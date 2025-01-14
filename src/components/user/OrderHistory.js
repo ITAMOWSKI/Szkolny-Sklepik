@@ -77,8 +77,7 @@ class OrderHistory extends Component {
                     <select
                         className="form-select w-auto"
                         value={filterStatus}
-                        onChange={this.handleFilterChange}
-                    >
+                        onChange={this.handleFilterChange}>
                         <option value="all">Wszystkie zamówienia</option>
                         <option value="new">Nowe</option>
                         <option value="inProgress">W realizacji</option>
@@ -118,17 +117,14 @@ class OrderHistory extends Component {
                                     </td>
                                     <td>{order.totalAmount.toFixed(2)} zł</td>
                                     <td>
-                      <span className={this.getStatusBadgeClass(order.status)} className="badge rounded-pill text-bg-success">
-                        {this.getStatusText(order.status)}
-                      </span>
+                                      <span className={this.getStatusBadgeClass(order.status)} className="badge rounded-pill text-bg-success">
+                                            {this.getStatusText(order.status)}
+                                      </span>
                                     </td>
                                     <td>
                                         <button
                                             className="btn btn-sm btn-secondary"
-                                            onClick={() => this.props.onShowDetails(order)}
-                                        >
-                                            Pokaż
-                                        </button>
+                                            onClick={() => this.props.onShowDetails(order)}>Pokaż</button>
                                     </td>
                                 </tr>
                             ))}

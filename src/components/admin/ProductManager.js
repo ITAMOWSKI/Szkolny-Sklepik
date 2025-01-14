@@ -104,8 +104,7 @@ class ProductManager extends Component {
                             className="form-control"
                             value={editProduct ? editProduct.name : newProduct.name}
                             placeholder="Kanapka"
-                            onChange={this.handleInputChange}
-                        />
+                            onChange={this.handleInputChange}/>
                     </div>
                     <div className="form-group">
                         <label>Cena</label>
@@ -116,8 +115,7 @@ class ProductManager extends Component {
                                 className="form-control"
                                 value={editProduct ? editProduct.price : newProduct.price}
                                 placeholder="2.50"
-                                onChange={this.handleInputChange}
-                            />
+                                onChange={this.handleInputChange}/>
                             <span className="input-group-text">zł</span>
                         </div>
                     </div>
@@ -127,8 +125,7 @@ class ProductManager extends Component {
                             name="category"
                             className="form-control"
                             value={editProduct ? editProduct.category : newProduct.category}
-                            onChange={this.handleInputChange}
-                        >
+                            onChange={this.handleInputChange}>
                             <option value="">Wybierz kategorię</option>
                             <option value="food">Jedzenie</option>
                             <option value="drinks">Napoje</option>
@@ -144,8 +141,7 @@ class ProductManager extends Component {
                             className="form-control"
                             value={editProduct ? editProduct.description : newProduct.description}
                             placeholder="Krótki opis produktu"
-                            onChange={this.handleInputChange}
-                        />
+                            onChange={this.handleInputChange}/>
                     </div>
                     <button type="submit" className="btn btn-success">
                         {editProduct ? 'Zaktualizuj produkt' : 'Dodaj produkt'}
@@ -173,16 +169,10 @@ class ProductManager extends Component {
                                     <div className="btn-group">
                                         <button
                                             className="btn btn-sm btn-warning mr-2"
-                                            onClick={() => this.handleEdit(product)}
-                                        >
-                                            Edytuj
-                                        </button>
+                                            onClick={() => this.handleEdit(product)}>Edytuj</button>
                                         <button
                                             className="btn btn-sm btn-danger"
-                                            onClick={() => this.handleDelete(product.id)}
-                                        >
-                                            Usuń
-                                        </button>
+                                            onClick={() => this.handleDelete(product.id)}>Usuń</button>
                                     </div>
                                 </td>
                             </tr>

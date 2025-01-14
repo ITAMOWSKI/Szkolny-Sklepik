@@ -17,8 +17,7 @@ class Navbar extends Component {
                         data-bs-target="#navbarText"
                         aria-controls="navbarText"
                         aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
+                        aria-label="Toggle navigation">
                         <i className="bi bi-grid-3x3-gap-fill"></i>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarText">
@@ -29,10 +28,7 @@ class Navbar extends Component {
                             {isAuthenticated && !isAdmin && (
                                 <>
                                     <li className="nav-item position-relative">
-                                        <Link className="nav-link active" to="/cart">
-                                            <i class="bi bi-basket3-fill"></i>
-                                            Koszyk
-                                        </Link>
+                                        <Link className="nav-link active" to="/cart"><i class="bi bi-basket3-fill"></i>Koszyk</Link>
                                         <span
                                             className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                                 {this.props.cart.length}
@@ -40,28 +36,20 @@ class Navbar extends Component {
                                           </span>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link active" to="/order-history"><i
-                                            class="bi bi-clock-history"></i>Historia
-                                            zamówień</Link>
+                                        <Link className="nav-link active" to="/order-history"><i class="bi bi-clock-history"></i>Historia zamówień</Link>
                                     </li>
                                 </>
                             )}
                             {isAdmin && (
                                 <>
                                     <li className="nav-item">
-                                        <Link className="nav-link active" to="/admin"><i
-                                            className="bi bi-clipboard2-data-fill"></i>Panel
-                                            administratora</Link>
+                                        <Link className="nav-link active" to="/admin"><i className="bi bi-clipboard2-data-fill"></i>Panel administratora</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link active" to="/admin/orders"><i
-                                            className="bi bi-list-ul"></i>Zarządzanie
-                                            zamówieniami</Link>
+                                        <Link className="nav-link active" to="/admin/orders"><i className="bi bi-list-ul"></i>Zarządzanie zamówieniami</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link active" to="/admin/products"><i
-                                            className="bi bi-bag-plus-fill"></i>Zarządzanie
-                                            produktami</Link>
+                                        <Link className="nav-link active" to="/admin/products"><i className="bi bi-bag-plus-fill"></i>Zarządzanie produktami</Link>
                                     </li>
 
                                 </>
@@ -74,13 +62,7 @@ class Navbar extends Component {
                                     <Link className="nav-link d-inline mx-2" to="/register"><i class="bi bi-person-plus-fill"></i>Rejestracja</Link>
                                 </>
                             ) : (
-                                <Link
-                                    className="nav-link d-inline"
-                                    onClick={onLogout}
-                                >
-                                    <i className="bi bi-box-arrow-right"></i>
-                                    Wyloguj się
-                                </Link>
+                                <Link className="nav-link d-inline" onClick={onLogout}><i className="bi bi-box-arrow-right"></i>Wyloguj się</Link>
                             )}
                         </span>
                     </div>

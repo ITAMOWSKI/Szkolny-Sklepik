@@ -55,10 +55,7 @@ const Login = ({ onLogin }) => {
                         <h3 className="card-title text-center">Logowanie</h3>
                         <div className="d-flex mb-3">
                             Nie masz konta?
-                                <Link className="icon-link icon-link-hover mx-1" to="/Register">
-                                    Utwórz je
-                                    <i className="bi bi-arrow-right p-0"></i>
-                                </Link>
+                                <Link className="icon-link icon-link-hover mx-1" to="/Register">Utwórz je<i className="bi bi-arrow-right p-0"></i></Link>
                         </div>
                         {error && (
                             <div className="alert alert-danger">
@@ -74,8 +71,7 @@ const Login = ({ onLogin }) => {
                                     value={email}
                                     placeholder="jan@example.com"
                                     onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                />
+                                    required/>
                             </div>
                             <div className="form-group mb-2">
                                 <label>Hasło</label>
@@ -84,12 +80,9 @@ const Login = ({ onLogin }) => {
                                     className="form-control"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    required
-                                />
+                                    required/>
                             </div>
-                            <button type="submit" className="btn btn-success btn-block">
-                                Zaloguj się
-                            </button>
+                            <button type="submit" className="btn btn-success btn-block">Zaloguj się</button>
                         </form>
                     </div>
                 </div>

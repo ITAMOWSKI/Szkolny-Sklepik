@@ -85,8 +85,7 @@ const Register = ({ onRegister }) => {
                                         value={className}
                                         placeholder="4AP"
                                         onChange={(e) => setClassName(e.target.value)}
-                                        required
-                                    />
+                                        required/>
                                 </div>
                             </div>
                             <div className="form-group">
@@ -97,8 +96,7 @@ const Register = ({ onRegister }) => {
                                     value={email}
                                     placeholder="jan@example.com"
                                     onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                />
+                                    required/>
                             </div>
                             <div className="form-group">
                                 <label>Hasło</label>
@@ -107,8 +105,7 @@ const Register = ({ onRegister }) => {
                                     className="form-control"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    required
-                                />
+                                    required/>
                             </div>
                             <div className="form-group mb-2">
                                 <label>Potwierdź hasło</label>
@@ -117,8 +114,7 @@ const Register = ({ onRegister }) => {
                                     className="form-control"
                                     value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)}
-                                    required
-                                />
+                                    required/>
                             </div>
                             <button type="submit" className="btn btn-success btn-block">
                                 Zarejestruj się

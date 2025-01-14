@@ -58,14 +58,12 @@ class ProductList extends Component {
                             type="text"
                             className="form-control"
                             placeholder="Szukaj produktów..."
-                            onChange={this.handleSearch}
-                        />
+                            onChange={this.handleSearch}/>
                     </div>
                     <div className="col-md-4">
                         <select
                             className="form-select"
-                            onChange={this.handleCategoryChange}
-                        >
+                            onChange={this.handleCategoryChange}>
                             <option value="all">Wszystkie kategorie</option>
                             <option value="food">Jedzenie</option>
                             <option value="drinks">Napoje</option>

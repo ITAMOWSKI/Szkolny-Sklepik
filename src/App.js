@@ -312,26 +312,18 @@ class App extends Component {
                     />
                     <main className="container py-4">
                         <Routes>
-                            <Route
-                                path="/"
-                                element={
+                            <Route path="/" element={
                                     <ProductList
                                         products={this.state.products}
                                         addToCart={this.addToCart}
                                     />
                                 }
                             />
-                            <Route
-                                path="/login"
-                                element={<Login onLogin={this.login} />}
+                            <Route path="/login" element={<Login onLogin={this.login} />}
                             />
-                            <Route
-                                path="/register"
-                                element={<Register onRegister={this.register} />}
+                            <Route path="/register" element={<Register onRegister={this.register} />}
                             />
-                            <Route
-                                path="/cart"
-                                element={
+                            <Route path="/cart" element={
                                     <Cart
                                         cart={this.state.cart}
                                         onRemoveItem={this.removeFromCart}
@@ -339,9 +331,7 @@ class App extends Component {
                                     />
                                 }
                             />
-                            <Route
-                                path="/order"
-                                element={
+                            <Route path="/order" element={
                                     <OrderForm
                                         items={this.state.cart}
                                         totalAmount={this.state.cart.reduce((total, item) => total + item.price * item.quantity, 0)}
@@ -351,9 +341,7 @@ class App extends Component {
                             />
                             <Route path="/order-history" element={<OrderHistory />} />
                             <Route path="/admin" element={<AdminDashboard orders={this.state.orders} products={this.state.products}/>} />
-                            <Route
-                                path="/admin/products"
-                                element={
+                            <Route path="/admin/products" element={
                                     <ProductManager
                                         products={this.state.products}
                                         addProduct={this.addProduct}
@@ -362,10 +350,7 @@ class App extends Component {
                                     />
                                 }
                             />
-                            <Route
-                                path="/admin/orders"
-                                element={<OrderManager orders={this.state.orders} />}
-                            />
+                            <Route path="/admin/orders" element={<OrderManager orders={this.state.orders} />} />
                         </Routes>
                     </main>
                     <Footer />

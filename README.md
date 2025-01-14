@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="public/logo192.png" alt="Logo">
+    <img src="screenshots/logo192.png" alt="Logo">
     <h1>Szkolny Sklepik</h1>
 </div>
 

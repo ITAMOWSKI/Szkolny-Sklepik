@@ -20,8 +20,7 @@ class ProductCard extends Component {
                     </p>
                     <button
                         className="btn btn-success"
-                        onClick={() => this.props.addToCart(this.props.product, 1)}
-                    >
+                        onClick={() => this.props.addToCart(this.props.product, 1)}>
                         <i className="bi bi-cart-plus-fill"></i>Dodaj do koszyka
                     </button>
                 </div>

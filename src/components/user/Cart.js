@@ -57,17 +57,11 @@ class Cart extends Component {
                                                 <button
                                                     className="btn btn-outline-secondary"
                                                     onClick={() => this.handleQuantityChange(item.id, -1)}
-                                                    disabled={item.quantity <= 1}
-                                                >
-                                                    -
-                                                </button>
+                                                    disabled={item.quantity <= 1}>-</button>
                                                 <span className="input-group-text">{item.quantity}</span>
                                                 <button
                                                     className="btn btn-outline-secondary"
-                                                    onClick={() => this.handleQuantityChange(item.id, 1)}
-                                                >
-                                                    +
-                                                </button>
+                                                    onClick={() => this.handleQuantityChange(item.id, 1)}>+</button>
                                             </div>
                                         </td>
                                         <td>{(item.price * item.quantity).toFixed(2)} zł</td>
@@ -75,9 +69,7 @@ class Cart extends Component {
                                             <button
                                                 className="btn btn-danger btn-sm"
                                                 onClick={() => onRemoveItem(item.id)}
-                                            >
-                                                Usuń
-                                            </button>
+                                            >Usuń</button>
                                         </td>
                                     </tr>
                                 ))}

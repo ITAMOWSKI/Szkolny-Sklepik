@@ -85,8 +85,7 @@ class OrderForm extends Component {
                                 name="deliveryTime"
                                 className="form-select"
                                 onChange={this.handleInputChange}
-                                value={this.state.deliveryTime}
-                            >
+                                value={this.state.deliveryTime}>
                                 <option value="">Wybierz godzinę</option>
                                 <option value="8:45">8:45 - Pierwsza przerwa</option>
                                 <option value="9:40">9:40 - Druga przerwa</option>
@@ -104,8 +103,7 @@ class OrderForm extends Component {
                                 name="paymentMethod"
                                 className="form-control"
                                 onChange={this.handleInputChange}
-                                value={this.state.paymentMethod}
-                            >
+                                value={this.state.paymentMethod}>
                                 <option value="cash">Gotówka</option>
                                 <option value="card">Karta płatnicza</option>
                             </select>
@@ -119,8 +117,7 @@ class OrderForm extends Component {
                                 rows="3"
                                 onChange={this.handleInputChange}
                                 placeholder="(Opcionalne)"
-                                value={this.state.notes}
-                            ></textarea>
+                                value={this.state.notes}></textarea>
                         </div>
 
                         <div className="table-responsive mb-3">
@@ -156,8 +153,7 @@ class OrderForm extends Component {
                                     id="termsAccepted"
                                     name="termsAccepted"
                                     checked={this.state.termsAccepted}
-                                    onChange={this.handleInputChange}
-                                />
+                                    onChange={this.handleInputChange}/>
                                 <label className="form-check-label" for="termsAccepted">
                                     Akceptuję regulamin sklepiku
                                 </label>
